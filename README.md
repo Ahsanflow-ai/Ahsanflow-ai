@@ -1,98 +1,115 @@
-# Ahsan Afzal
+# Customer Inquiry Pricing Classifier
 
-### AI Automation Specialist | AhsanFlow
+AhsanFlow automation for handling customer product and pricing inquiries through a structured business workflow.
 
-I design and build intelligent automation systems that turn repetitive business processes into reliable, scalable workflows.
+## Overview
 
-## What I Build
+Small online businesses often receive repeated customer inquiries about product prices, while the same customer information may also need to be recorded, updated, and shared internally.
 
-I build AI-powered automation systems for:
+This workflow automates that process from inquiry intake to customer response and internal notification.
 
-- Business process automation
-- Customer and communication workflows
-- Lead management and follow-up
-- Lead qualification and routing
-- E-commerce operations
-- Data and workflow automation
-- Repetitive operational processes
-- AI-assisted decision and response workflows
+## Business Problem
+
+A typical customer pricing inquiry can require several manual steps:
+
+- Receive the inquiry
+- Validate the submitted customer information
+- Determine whether the message is a pricing inquiry
+- Check and manage customer/lead information
+- Update or create the relevant record
+- Notify the business team
+- Send a response to the customer
+
+Handling these steps manually for every inquiry creates repetitive work and increases the chance of inconsistent processing.
+
+## What This Automation Does
+
+The workflow follows this general process:
+
+**Customer Inquiry**
+→ **Webhook receives the request**
+→ **Validate required information**
+→ **Validate email**
+→ **Classify the inquiry**
+→ **Find or update customer/lead data**
+→ **Create a new record when required**
+→ **Notify the business team**
+→ **Send customer response**
+→ **Return workflow response**
+
+## Workflow Logic
+
+### 1. Inquiry Intake
+
+The workflow receives customer information and inquiry data through a webhook.
+
+### 2. Data Validation
+
+Required fields are checked before the workflow continues.
+
+Invalid or incomplete information is handled before the main process runs.
+
+### 3. Inquiry Classification
+
+The workflow checks whether the incoming message is related to pricing.
+
+This version uses rule-based workflow logic rather than an LLM-based AI classifier.
+
+### 4. Customer / Lead Data Handling
+
+The workflow checks the available business data and determines whether the customer record already exists.
+
+Depending on the result, the workflow can:
+
+- Update an existing record
+- Create a new record
+
+### 5. Internal Notification
+
+Relevant information is sent to the business team so the inquiry can be monitored and handled appropriately.
+
+### 6. Customer Response
+
+The workflow sends a response back to the customer after the required processing is completed.
+
+## Example
+
+**Customer Inquiry**
+
+> Blue shirt ki price kya hai?
+
+The workflow receives the inquiry, validates the submitted information, identifies the pricing-related request, processes the customer/lead record, and continues through the configured response and notification steps.
+
+## Business Value
+
+This automation is designed to help small online businesses:
+
+- Reduce repetitive manual inquiry handling
+- Standardize the inquiry-processing process
+- Maintain customer and lead information consistently
+- Improve internal visibility of incoming inquiries
+- Respond to customers through an automated workflow
+
+## Technology & Integrations
+
+- n8n
+- Webhooks
+- Google Sheets
+- Gmail
+- Conditional workflow logic
+- Data validation
+- API-based workflow communication
+
+## Portfolio Demo
+
+This repository contains a sanitized portfolio version of the workflow.
+
+Real credentials, private customer information, and production business data are not included.
+
+The public workflow is provided for demonstration and portfolio purposes.
 
 ## AhsanFlow
 
-AhsanFlow focuses on practical AI automation for e-commerce and online businesses.
+AhsanFlow builds practical automation systems for e-commerce and online businesses, with a focus on reducing repetitive manual work and improving business processes.
 
-The goal is simple:
-
-**Reduce repetitive manual work, improve business processes, and build reliable systems that allow businesses to operate more efficiently.**
-
-## Automation Portfolio
-
-### 15 Completed Automation Projects
-
-I have built and documented 15 automation projects covering different business workflows, operational processes, customer interactions, lead management, and AI-powered automation use cases.
-
-### Selected Projects
-
-#### 01 — Customer Inquiry Pricing Classifier
-AI-powered automation for understanding customer pricing inquiries and connecting them with relevant business information.
-
-#### 02 — Lead Follow-Up Automation
-Automation designed to manage lead follow-ups consistently and reduce missed follow-up opportunities.
-
-#### 03 — Appointment Management Automation
-Automation for handling appointment-related workflows, confirmations, and follow-up processes.
-
-#### 04 — AI Lead Qualification & Routing
-AI-assisted automation for qualifying leads and routing them according to defined business rules and requirements.
-
-More completed automation projects are included in the AhsanFlow portfolio.
-
-## How I Approach Automation
-
-I start with the business process, not the tool.
-
-**Understand the process → Identify repetitive work → Define the logic → Design the workflow → Add AI where it creates real value → Test the system → Improve reliability**
-
-The objective is not to automate everything.
-
-The objective is to automate the right processes in a way that is practical, reliable, and maintainable.
-
-## What I Focus On
-
-- Reducing repetitive manual work
-- Improving response and follow-up processes
-- Automating operational workflows
-- Connecting business data and processes
-- Using AI where human-like understanding or decision-making adds value
-- Building practical systems around real business problems
-
-## Technology
-
-- AI & LLMs
-Workflow Orchestration
-API & Webhook Integrations
-Business Databases
-AI Memory & Retrieval
-RAG & Vector Search
-CRM & Customer Systems
-WhatsApp & Omnichannel Automation
-Web Applications
-Voice AI
-Monitoring & AI Evaluation
-
-## AhsanFlow Philosophy
-
-**Business problem first.  
-Automation second.  
-AI where it adds real value.**
-
-I focus on building useful systems rather than adding complexity for the sake of technology.
-
-## Contact
-
-For automation projects and business inquiries:
-
-**hello@ahsanflow.com**
-
-**AhsanFlow**  
-AI Automation for e-commerce and online businesses.
+**Contact:** hello@ahsanflow.com
